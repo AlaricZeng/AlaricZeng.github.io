@@ -10,7 +10,7 @@ Instagram: _alariczeng_
 
 Email: _alaric@udel.edu_
 
-Photography blog: _www.alariclightstory.com_
+Photography blog: [AlaricLightStory](http://www.alariclightstory.com)
 
 ## Projects
 
