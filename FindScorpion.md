@@ -69,6 +69,7 @@ Since if there is a scorpion, there is a head in AOne that could let all PZero++
 ### Pseudocode
 
 '''pseudocode
+
 M[i][j] represents the adjacency matrix, i,j = 1, 2, ..., n
 CZero counts the zero's number, initailly equals to 0
 COne counts the one's number, initailly equals to 0
