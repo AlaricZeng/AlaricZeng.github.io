@@ -44,10 +44,13 @@ So we check if two ones seperatelly represent tail and head by directly going to
 Then the first row could be the head(not necessary, just maybe).
 So we check if the only zero(except M[1][1]) M[_FZero][j] j = 1, 2, ..., n; represent the tial and it connects to body
 
-#### Otherwise
+### Otherwise
 
 This situation includes those condition that: the first row's one number neither be one, two or n - 2 or the first row isn't tail, head or body after verification
 
 Thus we know that the first row is the foot
+
+We traverse the first row again and store the zero and one value's index into two arrays: AZero, AOne
+
 
 [back](./)
