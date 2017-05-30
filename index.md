@@ -5,8 +5,11 @@ I'm [Alaric](https://alariczeng.github.io), a CS graduate student at University 
 ### Contact
 
 Facebook: _alariczeng_
+
 Instagram: _alariczeng_
+
 Email: _alaric@udel.edu_
+
 Photography blog: _www.alariclightstory.com_
 
 ## Projects
