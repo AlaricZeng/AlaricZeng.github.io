@@ -54,6 +54,15 @@ We traverse the first row again and store the zero and one value's index into tw
 
 For instance
 
-![](assets/images/Array.png)
+![](assets/images/FS_Array.png)
 
+Every item in AZero represents either tail, body or foot
+
+Every item in AOne represents either head or foot
+
+![](assets/images/FS_Array_Point.png)
+
+We define two pointers PZero, POne that initially point to the head of AZero and AOne. Each time we check if M[AZero[PZero]][AOne[POne]] == 1 which means there is connection between the two items. So the AZero[PZero] couldn't be the tail, we let PZero++. If M[AZero[PZero]][AOne[POne]] == 0, which means there is no connection between the two items, we let POne++.
+
+Since if there is a scorpion, there is a head in AOne that could let all PZero++ except the POne point to the tail. The tail exist in AZero that should let all POne++. Thus when one point points to end, the point in AZero should point to the tail otherwise there isn't scorpion.
 [back](./)
