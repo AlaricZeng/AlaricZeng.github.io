@@ -145,5 +145,8 @@ Check if AZero[PZero] is the tail. If it isn't there is no scorpion.
 ### User interactive program with Javascript
 
 [FindScorpion](assets/source/FindScorpion/index.html)
+[GitHub Link](https://github.com/AlaricZeng/FindScorpion.git)
+
+![](assets/images/FindScorpionJS.png)
 
 [back](./)
