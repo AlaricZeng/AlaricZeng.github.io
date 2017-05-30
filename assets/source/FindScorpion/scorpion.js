@@ -394,6 +394,7 @@ $('#link-button').click(function()
 	drawLink = true;
 });
 
+
 function makeSVG(tag, attrs) 
 {
     var el= document.createElementNS('http://www.w3.org/2000/svg', tag);
