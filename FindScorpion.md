@@ -52,5 +52,8 @@ Thus we know that the first row is the foot
 
 We traverse the first row again and store the zero and one value's index into two arrays: AZero, AOne
 
+For instance
+
+![](assets/images/Array.png)
 
 [back](./)
