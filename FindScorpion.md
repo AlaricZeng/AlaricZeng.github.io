@@ -66,4 +66,79 @@ We define two pointers PZero, POne that initially point to the head of AZero and
 
 Since if there is a scorpion, there is a head in AOne that could let all PZero++ except the POne point to the tail. The tail exist in AZero that should let all POne++. Thus when one point points to end, the point in AZero should point to the tail otherwise there isn't scorpion.
 
+### Pseudocode
+
+'''pseudocode
+M[i][j] represents the adjacency matrix, i,j = 1, 2, ..., n
+CZero counts the zero's number, initailly equals to 0
+COne counts the one's number, initailly equals to 0
+FZero records the first zero appears in the row excepts itself, initailly equals to -1
+FOne records the first one appears in the row, initailly equals to -1
+
+for (j = 0; j < n; j++)
+{
+	if (M[1][j] == 0)
+	{
+		CZero++;
+		if (FZero == -1)
+		{
+			FZero = j;
+		}
+	}
+	else
+	{
+		COne++;
+		if (FOne == -1)
+		{
+			FOne = j;
+		}
+	}
+}
+
+if (COne == 1)
+{
+	Check if M[FOne] is the body
+	If it is check if the body connect to an n-2 connections node, which should be a head
+}
+else if (COne == 2)
+{
+	Check if it connects to a tail and a head
+}
+else if (COne == n - 2)
+{
+	Check if it connects to body and that body connects to an 1 connections node, which should be a tail.
+}
+else
+{
+	Maintain two arrays AZero and AOne
+	for (j = 0; j < n; j++)
+	{
+		if (M[1][j] == 0)
+		{
+			AZero.push_back(j);
+		}
+		else
+		{
+			AOne.push_back(j);
+		}
+	}
+}
+
+Let PZero = 0, POne = 0;
+while (PZero < AZero.length(); POne < AOne.length())
+{
+	if (M[AZero[PZero]] == 1)
+	{
+		pZero++;
+	}
+	else
+	{
+		POne++;
+	}
+}
+
+Check if AZero[PZero] is the tail. If it isn't there is no scorpion.
+
+'''
+
 [back](./)
