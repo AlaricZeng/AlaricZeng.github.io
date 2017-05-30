@@ -68,7 +68,7 @@ Since if there is a scorpion, there is a head in AOne that could let all PZero++
 
 ### Pseudocode
 
-'''pseudocode
+```pseudocode
 
 M[i][j] represents the adjacency matrix, i,j = 1, 2, ..., n
 CZero counts the zero's number, initailly equals to 0
@@ -140,6 +140,6 @@ while (PZero < AZero.length(); POne < AOne.length())
 
 Check if AZero[PZero] is the tail. If it isn't there is no scorpion.
 
-'''
+```
 
 [back](./)
