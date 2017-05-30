@@ -16,4 +16,10 @@ Photography blog: [AlaricLightStory](http://www.alariclightstory.com)
 
 Here are parts of projects that I have done
 
-### Photography blog: AlaricLightStory
+### [Photography blog: AlaricLightStory](AlaricLightStory)
+
+I'm a fan of photography, so I tried to build a personal photography blog to share my works
+
+### [Find a scorpion](FindScorpion)
+
+Written in Javascripts. It achieves an algorithm that takes O(n) times to find a scorpion in a graph
