@@ -133,12 +133,21 @@ void MergeSort(T* arr, int start, int end)
 
 ```
 
+
+
+
 ### Quick Sorting
 
 Quick Sorting is an efficient, comparison-based sorting algorithm with O(nlogn) time complexity in Best or Average cases. In the worst cases it could cost O(n^2). It will take O(n) space. The core idea is choosing a item in the array as pivot, then traverse the array once and put items that are less or equal to the pivot on the left side and items that are larger or equal to the the pivot on the right side. 
 
 ![](assets/images/BA_QuickSort.png)
 
-Then consider each side. For each side, select 
+Then consider each side. For each side, select a new pivot and do the same process again. Until to the one that in a side only two elements left, after the same process, the two elements side should be a sortted subarray.
+
+View from the bottom, we know that the left side always no larger than the right side by our processing. And in the bottom, each subarray is a sortted array, thus the total array is sortted.
+
+In the best case, if every time we can choose the medium as pivot, then the recurrence would be T(n) = 2T(n / 2) + O(n), the time complexity should be O(nlogn). However, in the worst case, we may only divide the original array to an array with 1 item and another array with n - 1 items. e.g. If the original array was a descreasing order and we always choose the first item as pivot. The recurrence becomes T(n) = T(n - 1) + O(n). It could cost O(n^2)
+
+Thus, it may largely depend on choosing the 'correct' pivot. In reality, we always choose a random item as pivot.
 
 [back](./)
