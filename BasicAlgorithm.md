@@ -12,6 +12,8 @@ Merge Sorting is an efficient, comparison-based sorting algorithm with O(nlogn) 
 
 The recurrence would be T(n) = 2T(n/2) + O(n)
 
+Here is an example
 
+![](assets/images/BA_MergeSort.png)
 
 [back](./)
