@@ -23,3 +23,7 @@ I'm a fan of photography, so I tried to build a personal photography blog to sha
 ### [Find a scorpion](FindScorpion)
 
 Written in Javascripts. It achieves an algorithm that takes O(n) times to find a scorpion in a graph
+
+### [Basic Algorithms](BasicAlgorithm)
+
+Summarize some basic algorithms such as sorting, searching. Achieve them with C++
