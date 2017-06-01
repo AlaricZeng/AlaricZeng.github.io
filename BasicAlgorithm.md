@@ -137,7 +137,7 @@ void MergeSort(T* arr, int start, int end)
 
 Quick Sorting is an efficient, comparison-based sorting algorithm with O(nlogn) time complexity in Best or Average cases. In the worst cases it could cost O(n^2). It will take O(n) space. The core idea is choosing a item in the array as pivot, then traverse the array once and put items that are less or equal to the pivot on the left side and items that are larger or equal to the the pivot on the right side. 
 
-[]!(assets/images/BA_QuickSort.png)
+![](assets/images/BA_QuickSort.png)
 
 Then consider each side. For each side, select 
 
