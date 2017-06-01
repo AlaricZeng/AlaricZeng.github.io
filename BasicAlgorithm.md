@@ -16,4 +16,44 @@ Here is an example
 
 ![](assets/images/BA_MergeSort.png)
 
+### Pseudocode
+
+```pseudocode
+Let A[i] i = 1, 2, ..., n; be the original array
+
+defun MergeSort(A, start, end)
+{
+	while start <= end do:
+		middle = start + (end - start) / 2 
+		//Recursive division
+		MergeSort(A, start, middle, end)
+		MergeSort(A, middle + 1, end)
+		//Merge
+		Merge(A, start, middle, end)
+}
+
+defun Merge(A, start, middle, end)
+{
+	Let subA1[0,...,P] be a new array that store A[start : middle]
+	Let subA2[0,...,Q] be a new array that store A[start + 1 : end]
+	Let j = 0; k = 0;
+
+	//Sort the array from start to end position
+	for (i = start; i <= end; i++)
+	{
+		if (subA1[j] < subA2[k])
+		{
+			A[i] = subA1[j];
+			j++;
+		}
+		else if (subA1[j] >= subA2[k])
+		{
+			A[i] = subA2[k];
+			k++;
+		}
+	}
+}
+
+```
+
 [back](./)
