@@ -148,6 +148,9 @@ Check if AZero[PZero] is the tail. If it isn't there is no scorpion.
 
 [GitHub Link](https://github.com/AlaricZeng/FindScorpion.git)
 
+<p data-height="392" data-theme-id="0" data-slug-hash="QgWrZv" data-default-tab="js" data-user="AlaricZeng" data-embed-version="2" data-pen-title="QgWrZv" class="codepen">See the Pen <a href="https://codepen.io/AlaricZeng/pen/QgWrZv/">QgWrZv</a> by Eugene (<a href="https://codepen.io/AlaricZeng">@AlaricZeng</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 ![](assets/images/FindScorpionJS.png)
 
 [back](./)
