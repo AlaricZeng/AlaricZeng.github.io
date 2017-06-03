@@ -18,7 +18,7 @@ Here is an example
 
 ![](assets/images/BA_MergeSort.png)
 
-### Pseudocode
+#### Pseudocode
 
 ```pseudocode
 Let A[i] i = 1, 2, ..., n; be the original array
@@ -60,7 +60,7 @@ defun Merge(A, start, middle, end)
 
 ```
 
-### C++ code to achieve
+#### C++ code to achieve
 
 ```C++
 /*
@@ -133,9 +133,6 @@ void MergeSort(T* arr, int start, int end)
 
 ```
 
-
-
-
 ### Quick Sorting
 
 Quick Sorting is an efficient, comparison-based sorting algorithm with O(nlogn) time complexity in Best or Average cases. In the worst cases it could cost O(n^2). It will take O(n) space. The core idea is choosing a item in the array as pivot, then traverse the array once and put items that are less or equal to the pivot on the left side and items that are larger or equal to the the pivot on the right side. 
@@ -149,5 +146,9 @@ View from the bottom, we know that the left side always no larger than the right
 In the best case, if every time we can choose the medium as pivot, then the recurrence would be T(n) = 2T(n / 2) + O(n), the time complexity should be O(nlogn). However, in the worst case, we may only divide the original array to an array with 1 item and another array with n - 1 items. e.g. If the original array was a descreasing order and we always choose the first item as pivot. The recurrence becomes T(n) = T(n - 1) + O(n). It could cost O(n^2)
 
 Thus, it may largely depend on choosing the 'correct' pivot. In reality, we always choose a random item as pivot.
+
+Here is an example
+
+![](assets/images/BA_QuickSort2.png)
 
 [back](./)
