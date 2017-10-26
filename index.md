@@ -27,3 +27,7 @@ Written in Javascripts. It achieves an algorithm that takes O(n) times to find a
 ### [Basic Algorithms](BasicAlgorithm)
 
 Summarize some basic algorithms such as sorting, searching. Achieve them with C++
+
+### [MultiplayerFPS with Unity 3D](MultiplayerFPS)
+
+Study the tuition in Youtube: [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA). Do a multiplayer shooting game with Unity 3D
