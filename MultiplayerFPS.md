@@ -245,7 +245,7 @@
   * [SerializeField] GameObject killfeedItemPrefab
   * void Start():  GameManager.instance.onPlayerKilledCallback += OnKill;
   * void OnKill(string player, string source): Set KillfeedItem
-
+  
 ##  PlayerScoreboardItem.cs
 
 ### Location: PlayerScoreboardItem prefabs
@@ -293,4 +293,3 @@
   * IEnumerator sendGetDataRequest(string username string password, OnDataReceivedCallback onDataReceived): Get data by using DCF.GetUserData(username, password), onDataReceived.Invoke(response)
   * void SendData(string data): Call sendSendDataRequest()
   * sendSendDataRequest(string username, string password, string data): send data by using DCF.SetUserData(username, password, data)
-
