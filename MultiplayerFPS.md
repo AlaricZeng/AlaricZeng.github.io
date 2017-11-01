@@ -66,9 +66,9 @@
   * float GetThrusterFuelAmount(): return thrusterFuelAmount
   * void Start(): get motor, joint, animator. Call SetJointSettings()
   * void Update(): 
-  	if user press pause, lock cursor, set motor to zero
-  	Set joint. Calculate velocity according to Input and call motor.Move. Calculate rotation and call motor.Rotate. Calculate camera rotation and call motor.RotateCamera
-  	Calculate thrusterForce and thrusterFuel according to users press "Jump" or not
+    if user press pause, lock cursor, set motor to zero
+    Set joint. Calculate velocity according to Input and call motor.Move. Calculate rotation and call motor.Rotate. Calculate camera rotation and call motor.RotateCamera
+    Calculate thrusterForce and thrusterFuel according to users press "Jump" or not
   * void SetJointSettings(float jointSpring): set jointDrive
 
 ## PlayerSetup.cs
@@ -334,3 +334,26 @@
   * void JoinRoom(MatchInfoSnapshot match): Call networkManager.matchMaker.JoinMatch(). StartCoroutine(WaitForJoin())
   * IEnumerator WaitForJoin(): Call ClearRoomList(). Initialize countdown to 10. Minus 1 per second.  When countdown equals 0, set status to "Failed to connect". Call networkManager.matchMaker.DropConnection(). Call RefreshRoomList()
 
+<<<<<<< HEAD
+## UserAccount_Lobby.cs
+
+### Location: Canvas\User
+
+### Content:
+* Attributes:
+  * Text usernameText
+* Functions:
+  * void Start(): set usernameText
+  * void LogOut(): Call UserAccountManager.instance.LogOut()
+
+## PlayerStas.cs
+
+### Location: Canvas\PlayerStats
+
+### Content:
+* Attributes:
+  * Text killCount
+  * Text deathCount
+* Functions:
+  * void Start(): Call UserAccountManager.instance.GetData(OnReceivedData)
+  * void OnReceivedData(string data): Set killCount and deathCount text
