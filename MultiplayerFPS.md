@@ -66,9 +66,9 @@
   * float GetThrusterFuelAmount(): return thrusterFuelAmount
   * void Start(): get motor, joint, animator. Call SetJointSettings()
   * void Update(): 
-  	if user press pause, lock cursor, set motor to zero
-  	Set joint. Calculate velocity according to Input and call motor.Move. Calculate rotation and call motor.Rotate. Calculate camera rotation and call motor.RotateCamera
-  	Calculate thrusterForce and thrusterFuel according to users press "Jump" or not
+    if user press pause, lock cursor, set motor to zero
+    Set joint. Calculate velocity according to Input and call motor.Move. Calculate rotation and call motor.Rotate. Calculate camera rotation and call motor.RotateCamera
+    Calculate thrusterForce and thrusterFuel according to users press "Jump" or not
   * void SetJointSettings(float jointSpring): set jointDrive
 
 ## PlayerSetup.cs
@@ -246,6 +246,17 @@
   * void Start():  GameManager.instance.onPlayerKilledCallback += OnKill;
   * void OnKill(string player, string source): Set KillfeedItem
   
+## KillfeedItem.cs
+
+### Localtion: KillfeedItem prefabs
+
+### Content:
+* Attributes:
+  * Text text
+* Functions:
+  * void Setup(string player, string source): Set text content as which player kills which
+
+
 ##  PlayerScoreboardItem.cs
 
 ### Location: PlayerScoreboardItem prefabs
@@ -334,3 +345,72 @@
   * void JoinRoom(MatchInfoSnapshot match): Call networkManager.matchMaker.JoinMatch(). StartCoroutine(WaitForJoin())
   * IEnumerator WaitForJoin(): Call ClearRoomList(). Initialize countdown to 10. Minus 1 per second.  When countdown equals 0, set status to "Failed to connect". Call networkManager.matchMaker.DropConnection(). Call RefreshRoomList()
 
+## UserAccount_Lobby.cs
+
+### Location: Canvas\User
+
+### Content:
+* Attributes:
+  * Text usernameText
+* Functions:
+  * void Start(): set usernameText
+  * void LogOut(): Call UserAccountManager.instance.LogOut()
+
+## PlayerStats.cs
+
+### Location: Canvas\PlayerStats
+
+### Content:
+* Attributes:
+  * Text killCount
+  * Text deathCount
+* Functions:
+  * void Start(): Call UserAccountManager.instance.GetData(OnReceivedData)
+  * void OnReceivedData(string data): Set killCount and deathCount text
+
+## DataTranslator.cs
+
+### Location: Separate script file
+
+### Content:
+* Attributes:
+  * static string KILLS_SYMBOL
+  * static string DEATHS_SYMBOL
+* Functions:
+  * static string ValuesToData(int kills, int deaths): Format the death and kill number to string
+  * static int DataToKills(string data): Call DataToValue() to get kill number
+  * static int DataToDeaths(string data): Call DataToValue() to get death number
+  * static string DataToValue(string data, string symbol): convert string to kill and death number
+
+## MatchSettings.cs
+
+### Location: Separate script file
+
+### Content:
+* Attributes:
+  * float respawnTime
+
+## PlayerWeapon.cs
+
+### Location: Separate script file
+
+### Content:
+* Attributes:
+  * string name
+  * int damage
+  * float range
+  * float fireRate
+  * int maxBullets
+  * [HideInInspector] int bullets
+  * float reloadTime
+  * GameObject graphics
+* Functions:
+  * PlayerWeapon(): set bullets = maxBullets
+
+## Util.cs
+
+### Location: Separate script file
+
+### Content:
+* Functions:
+  * static void SetLayerRecursively(GameObject obj, int newLayer): Set Layer and its child layers name recursively
