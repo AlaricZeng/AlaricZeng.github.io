@@ -293,3 +293,44 @@
   * IEnumerator sendGetDataRequest(string username string password, OnDataReceivedCallback onDataReceived): Get data by using DCF.GetUserData(username, password), onDataReceived.Invoke(response)
   * void SendData(string data): Call sendSendDataRequest()
   * sendSendDataRequest(string username, string password, string data): send data by using DCF.SetUserData(username, password, data)
+
+## LoginMenu.cs
+
+### Location: LoginMenu(Empty GameObject)
+
+### Content:
+* A copy from database control. Modified to correspond with UserAccountManager
+
+## HostGame.cs
+
+### Location: HostGame(Empty GameObject)
+
+### Content:
+* Attributes:
+  * [SerializeField] uint roomSize
+  * string roomName
+  * NetworkManager networkManager
+* Functions:
+  * void Start(): initialize networkManger and call networkManager.StartMarchMaker()
+  * void SetRoomName(string name): set roomName
+  * void CreateRoom(): Call networkManager.matchMaker.CreateMatch()
+
+## JoinGame.cs
+
+### Location: JoinGame(Empty GameObject)
+
+### Content:
+* Attributes:
+  * List<GameObjet> roomList
+  * [SerializeField] Text status
+  * [SerializeField] GameObject roomListItemPrefab
+  * [SerializeField] Transfrom roomListParent
+  * NetworkManager networkManager
+* Functions:
+  * void Start(): Initialize networkManager and call networkManager.StartMatchMaker(). Call RefreshRoomList()
+  * void RefreshRoomList(): Call ClearRoomList(). Call networkManager.matchMaker.ListMatches(). Set status as "Loading..."
+  * void OnMatchList(bool success, string extendedInfo, List<MatchInfoSnapshot> matchList): Initialize roomListItem. Call roomListItem.Setup(). Add it to the roomList
+  * void ClearRoomList(): Traverse roomList and destroy every item
+  * void JoinRoom(MatchInfoSnapshot match): Call networkManager.matchMaker.JoinMatch(). StartCoroutine(WaitForJoin())
+  * IEnumerator WaitForJoin(): Call ClearRoomList(). Initialize countdown to 10. Minus 1 per second.  When countdown equals 0, set status to "Failed to connect". Call networkManager.matchMaker.DropConnection(). Call RefreshRoomList()
+
