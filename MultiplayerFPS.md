@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 # Scripts Files
 
 ## GameManager.cs
